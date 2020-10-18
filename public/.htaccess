@@ -5,6 +5,11 @@
 
     RewriteEngine On
 
+    order deny,allow
+    deny from all
+    allow from 14.8.115.0/30 # hara router
+    allow from 106.130.130.196 # haruyoshi iphone
+
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
