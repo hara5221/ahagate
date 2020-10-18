@@ -11,6 +11,12 @@
     allow from 106.130.130.196 # haruyoshi iphone
     allow from 192.168.50.1 # local
 
+    RewriteCond %{ENV:HTTPS} !on 
+    RewriteCond %{HTTP_HOST} !=localhost
+    RewriteCond %{HTTP_HOST} !=127.0.0.1
+    RewriteCond %{HTTP_HOST} !=ahagate.lde
+    RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
