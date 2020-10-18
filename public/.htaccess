@@ -5,17 +5,31 @@
 
     RewriteEngine On
 
+    # HTTPでアクセスされた場合、
+    RewriteCond %{HTTPS} off
+    # 以下のURLは常に https にリダイレクトする
+    RewriteCond %{HTTP_HOST} ahagate.com
+    # ただし以下は除く
+    RewriteCond %{REQUEST_URI} !^/assets/.*$
+    RewriteCond %{REQUEST_URI} !^.*\.(js|css|gif|jpg|png|ico)$
+    # https にリダイレクト
+    RewriteRule ^.*$ https://%{HTTP_HOST}%{REQUEST_URI} [R,L]
+
+    # HTTPSでアクセスされた場合、
+    RewriteCond %{HTTPS} on
+    # 以下のURL以外は常に http にリダイレクトする
+    RewriteCond %{HTTP_HOST} ahagate.lde
+    # ただし以下は除く
+    RewriteCond %{REQUEST_URI} !^/assets/.*$
+    RewriteCond %{REQUEST_URI} !^.*\.(js|css|gif|jpg|png|ico)$
+    # http にリダイレクト
+    RewriteRule ^.*$ http://%{HTTP_HOST}%{REQUEST_URI} [R,L]
+
     order deny,allow
     deny from all
     allow from 14.8.115.0/30 # hara router
     allow from 106.130.130.196 # haruyoshi iphone
     allow from 192.168.50.1 # local
-
-    RewriteCond %{ENV:HTTPS} !on 
-    RewriteCond %{HTTP_HOST} !=localhost
-    RewriteCond %{HTTP_HOST} !=127.0.0.1
-    RewriteCond %{HTTP_HOST} !=ahagate.lde
-    RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .
