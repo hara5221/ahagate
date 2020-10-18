@@ -131,6 +131,11 @@ class ComposerStaticInit6b01284dfa3e7c6beb68fa407b418488
             'Laravel\\Ui\\' => 11,
             'Laravel\\Tinker\\' => 15,
         ),
+        'J' => 
+        array (
+            'Jenssegers\\Agent\\' => 17,
+            'Jaybizzle\\CrawlerDetect\\' => 24,
+        ),
         'I' => 
         array (
             'Illuminate\\Support\\' => 19,
@@ -406,6 +411,14 @@ class ComposerStaticInit6b01284dfa3e7c6beb68fa407b418488
         array (
             0 => __DIR__ . '/..' . '/laravel/tinker/src',
         ),
+        'Jenssegers\\Agent\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/jenssegers/agent/src',
+        ),
+        'Jaybizzle\\CrawlerDetect\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/jaybizzle/crawler-detect/src',
+        ),
         'Illuminate\\Support\\' => 
         array (
             0 => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Macroable',
@@ -548,6 +561,13 @@ class ComposerStaticInit6b01284dfa3e7c6beb68fa407b418488
                 0 => __DIR__ . '/..' . '/scrivo/highlight.php',
             ),
         ),
+        'D' => 
+        array (
+            'Detection' => 
+            array (
+                0 => __DIR__ . '/..' . '/mobiledetect/mobiledetectlib/namespaced',
+            ),
+        ),
     );
 
     public static $classMap = array (
@@ -574,13 +594,16 @@ class ComposerStaticInit6b01284dfa3e7c6beb68fa407b418488
         'App\\Http\\Middleware\\TrustHosts' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustHosts.php',
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
+        'App\\Http\\ViewCreators\\ViewSwitchCreator' => __DIR__ . '/../..' . '/app/Http/ViewCreators/ViewSwitchCreator.php',
         'App\\Mail\\TestMail' => __DIR__ . '/../..' . '/app/Mail/TestMail.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
+        'App\\Providers\\AgentServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AgentServiceProvider.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
         'App\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/app/Providers/EventServiceProvider.php',
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
+        'App\\Providers\\ViewCreatorServiceProvider' => __DIR__ . '/../..' . '/app/Providers/ViewCreatorServiceProvider.php',
         'ArithmeticError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/ArithmeticError.php',
         'Asm89\\Stack\\Cors' => __DIR__ . '/..' . '/asm89/stack-cors/src/Cors.php',
         'Asm89\\Stack\\CorsService' => __DIR__ . '/..' . '/asm89/stack-cors/src/CorsService.php',
@@ -710,6 +733,7 @@ class ComposerStaticInit6b01284dfa3e7c6beb68fa407b418488
         'DeepCopy\\TypeFilter\\Spl\\SplDoublyLinkedListFilter' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/TypeFilter/Spl/SplDoublyLinkedListFilter.php',
         'DeepCopy\\TypeFilter\\TypeFilter' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/TypeFilter/TypeFilter.php',
         'DeepCopy\\TypeMatcher\\TypeMatcher' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/TypeMatcher/TypeMatcher.php',
+        'Detection\\MobileDetect' => __DIR__ . '/..' . '/mobiledetect/mobiledetectlib/namespaced/Detection/MobileDetect.php',
         'DivisionByZeroError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/DivisionByZeroError.php',
         'Doctrine\\Common\\Cache\\ApcCache' => __DIR__ . '/..' . '/doctrine/cache/lib/Doctrine/Common/Cache/ApcCache.php',
         'Doctrine\\Common\\Cache\\ApcuCache' => __DIR__ . '/..' . '/doctrine/cache/lib/Doctrine/Common/Cache/ApcuCache.php',
@@ -3149,6 +3173,14 @@ class ComposerStaticInit6b01284dfa3e7c6beb68fa407b418488
         'Illuminate\\View\\ViewFinderInterface' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/View/ViewFinderInterface.php',
         'Illuminate\\View\\ViewName' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/View/ViewName.php',
         'Illuminate\\View\\ViewServiceProvider' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/View/ViewServiceProvider.php',
+        'Jaybizzle\\CrawlerDetect\\CrawlerDetect' => __DIR__ . '/..' . '/jaybizzle/crawler-detect/src/CrawlerDetect.php',
+        'Jaybizzle\\CrawlerDetect\\Fixtures\\AbstractProvider' => __DIR__ . '/..' . '/jaybizzle/crawler-detect/src/Fixtures/AbstractProvider.php',
+        'Jaybizzle\\CrawlerDetect\\Fixtures\\Crawlers' => __DIR__ . '/..' . '/jaybizzle/crawler-detect/src/Fixtures/Crawlers.php',
+        'Jaybizzle\\CrawlerDetect\\Fixtures\\Exclusions' => __DIR__ . '/..' . '/jaybizzle/crawler-detect/src/Fixtures/Exclusions.php',
+        'Jaybizzle\\CrawlerDetect\\Fixtures\\Headers' => __DIR__ . '/..' . '/jaybizzle/crawler-detect/src/Fixtures/Headers.php',
+        'Jenssegers\\Agent\\Agent' => __DIR__ . '/..' . '/jenssegers/agent/src/Agent.php',
+        'Jenssegers\\Agent\\AgentServiceProvider' => __DIR__ . '/..' . '/jenssegers/agent/src/AgentServiceProvider.php',
+        'Jenssegers\\Agent\\Facades\\Agent' => __DIR__ . '/..' . '/jenssegers/agent/src/Facades/Agent.php',
         'JsonException' => __DIR__ . '/..' . '/symfony/polyfill-php73/Resources/stubs/JsonException.php',
         'Laravel\\Tinker\\ClassAliasAutoloader' => __DIR__ . '/..' . '/laravel/tinker/src/ClassAliasAutoloader.php',
         'Laravel\\Tinker\\Console\\TinkerCommand' => __DIR__ . '/..' . '/laravel/tinker/src/Console/TinkerCommand.php',
@@ -3428,6 +3460,7 @@ class ComposerStaticInit6b01284dfa3e7c6beb68fa407b418488
         'League\\MimeTypeDetection\\FinfoMimeTypeDetector' => __DIR__ . '/..' . '/league/mime-type-detection/src/FinfoMimeTypeDetector.php',
         'League\\MimeTypeDetection\\GeneratedExtensionToMimeTypeMap' => __DIR__ . '/..' . '/league/mime-type-detection/src/GeneratedExtensionToMimeTypeMap.php',
         'League\\MimeTypeDetection\\MimeTypeDetector' => __DIR__ . '/..' . '/league/mime-type-detection/src/MimeTypeDetector.php',
+        'Mobile_Detect' => __DIR__ . '/..' . '/mobiledetect/mobiledetectlib/Mobile_Detect.php',
         'Mockery' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery.php',
         'Mockery\\Adapter\\Phpunit\\MockeryPHPUnitIntegration' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/Adapter/Phpunit/MockeryPHPUnitIntegration.php',
         'Mockery\\Adapter\\Phpunit\\MockeryPHPUnitIntegrationAssertPostConditions' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/Adapter/Phpunit/MockeryPHPUnitIntegrationAssertPostConditions.php',
