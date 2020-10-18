@@ -15,16 +15,6 @@
     # https にリダイレクト
     RewriteRule ^.*$ https://%{HTTP_HOST}%{REQUEST_URI} [R,L]
 
-    # HTTPSでアクセスされた場合、
-    RewriteCond %{HTTPS} on
-    # 以下のURL以外は常に http にリダイレクトする
-    RewriteCond %{HTTP_HOST} ahagate.com
-    # ただし以下は除く
-    RewriteCond %{REQUEST_URI} !^/assets/.*$
-    RewriteCond %{REQUEST_URI} !^.*\.(js|css|gif|jpg|png|ico)$
-    # http にリダイレクト
-    RewriteRule ^.*$ http://%{HTTP_HOST}%{REQUEST_URI} [R,L]
-
     order deny,allow
     deny from all
     allow from 14.8.115.0/30 # hara router
